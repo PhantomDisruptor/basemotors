@@ -62,7 +62,7 @@ export function Header() {
         <>
             <header>
                 <Link to="/" onClick={() => setShowDropdown(false)}>
-                    <img className='asd' src="../../public/logo.svg" alt="BaseMotors" />
+                    <img className='asd' src="https://basemotors-api.onrender.com/api/images/logo.svg" alt="BaseMotors" />
                 </Link>
                 <div className='div1'>
                     <button onClick={handleAllCars} className='header-btn'>Автомобили</button>
