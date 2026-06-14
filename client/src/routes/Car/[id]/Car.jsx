@@ -62,7 +62,7 @@ export function Car() {
             </section>
             <section className='car-main-card'>
                 <div className='car-image'>
-                    <img src={`https://basemotors-api.onrender.com/api${car.img}`} alt={car.model} />
+                    <img src={`https://basemotors-api.onrender.com${car.img}`} alt={car.model} />
                 </div>
                 <div className='car-info-panel'>
                 <div>        
