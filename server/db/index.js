@@ -6,12 +6,9 @@ dotenv.config();
 const { Pool } = pg;
 
 const pool = new Pool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE,
-    port: process.env.DB_PORT,
-    ssl: { rejectUnauthorized: false }
+    connectionString: process.env.DATABASE_URL,  // ← именно так для одной строки
+    ssl: { rejectUnauthorized: false },
+    family: 4
 });
 // Проверка подключения
 pool.connect((err, client, release) => {
