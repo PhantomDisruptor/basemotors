@@ -15,7 +15,7 @@ export const MyOrders = () => {
     const fetchOrders = async () => {
         try {
             // Cookie отправляется автоматически с withCredentials
-            const response = await axios.get(`${API_URL}/orders/my-orders`, {
+            const response = await axios.get(`https://basemotors-api.onrender.com/api/orders/my-orders`, {
                 withCredentials: true
             });
             console.log('Orders received:', response.data);
