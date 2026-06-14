@@ -1,0 +1,243 @@
+/* Общие сбросы и стили для body (добавьте в глобальный CSS) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* Контейнер для всего компонента (оберните ваш JSX в <main className="car-detail-page">) */
+.car-detail-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* === Хедер с названием и кнопкой назад === */
+.car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.car-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #1e293b, #2d3748);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.back-button {
+    background: none;
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem 1.25rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.back-button:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateX(-2px);
+}
+
+/* === Карточка с изображением и ценой === */
+.car-main-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .car-main-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.car-image {
+    flex: 1.2;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 300px;
+}
+
+.car-image img {
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.car-image img:hover {
+    transform: scale(1.02);
+}
+
+.car-info-panel {
+    flex: 0.8;
+    background: #ffffff;
+    padding: 2rem 1.8rem;
+    border-left: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-block {
+    margin-bottom: 1.5rem;
+}
+
+.price-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.price-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #2c3e66;
+    margin-top: 0.25rem;
+    display: inline-block;
+    border-bottom: 2px solid #e2e8f0;
+    line-height: 1.2;
+}
+
+.stock-status {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    background: #e6f7ec;
+    color: #2e7d32;
+    padding: 0.3rem 0.9rem;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.buy-button {
+    margin-top: 1.8rem;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 60px;
+    background: blue ;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.buy-button:hover:not(:disabled) {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.buy-button:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* === Секция характеристик === */
+.specs-section {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 1.5rem 1rem 2rem 1rem;
+}
+
+.specs-section h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-left: 0.75rem;
+    border-left: 5px solid gray;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background 0.1s;
+}
+
+.specs-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.specs-table td {
+    padding: 1rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.specs-table td:first-child {
+    font-weight: 600;
+    color: #334155;
+    width: 40%;
+    letter-spacing: -0.2px;
+}
+
+.specs-table td:last-child {
+    color: #1e293b;
+    font-weight: 500;
+}
+
+/* Адаптация для маленьких экранов */
+@media (max-width: 640px) {
+    .car-detail-page {
+        padding: 1rem;
+    }
+    
+    .car-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .price-value {
+        font-size: 1.8rem;
+    }
+    
+    .specs-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .specs-table td:first-child {
+        width: 45%;
+    }
+    
+    .car-info-panel {
+        padding: 1.5rem;
+    }
+}

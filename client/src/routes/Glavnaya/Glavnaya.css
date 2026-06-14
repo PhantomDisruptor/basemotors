@@ -1,0 +1,272 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f5f7fb;
+    color: #1a1f36;
+}
+
+/* Секция подбора автомобиля */
+.section1 {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.h2_e {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1f36;
+    letter-spacing: -0.3px;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.div3 {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.div3 > div {
+    display: flex;
+    gap: 1rem;
+    flex: 2;
+}
+
+.select1 {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: white;
+    color: #1a1f36;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.select1:hover {
+    border-color: #cbd5e1;
+    background-color: #fafbfc;
+}
+
+.select1:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select1:disabled {
+    background-color: #f8fafc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.input1 {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.input1:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input1::placeholder {
+    color: #9ca3af;
+}
+
+/* Вторая строка фильтров */
+.div4 {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.select2 {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
+.select2:hover {
+    border-color: #cbd5e1;
+}
+
+.select2:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Кнопка Найти */
+.button_div {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.button1 {
+    background: #1a1f36;
+    color: white;
+    border: none;
+    padding: 0.9rem 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 200px;
+}
+
+.button1:hover {
+    background: #2d3a5e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 31, 54, 0.15);
+}
+
+.button1:active {
+    transform: translateY(0);
+}
+
+/* Секция О компании */
+.section2 {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.s_h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1f36;
+    letter-spacing: -0.3px;
+}
+
+.d_2 {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.d_img {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.img2 {
+    width: calc(50% - 0.5rem);
+    border-radius: 16px;
+    object-fit: cover;
+    height: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.img2:hover {
+    transform: scale(1.02);
+}
+
+.p_1 {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    text-align: justify;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section1, .section2 {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .h2_e, .s_h2 {
+        font-size: 1.5rem;
+    }
+
+    .div3 {
+        flex-direction: column;
+    }
+
+    .div3 > div {
+        flex-direction: column;
+    }
+
+    .div4 {
+        flex-direction: column;
+    }
+
+    .select1, .select2, .input1 {
+        width: 100%;
+    }
+
+    .d_2 {
+        flex-direction: column;
+    }
+
+    .d_img {
+        width: 100%;
+    }
+
+    .img2 {
+        width: calc(50% - 0.5rem);
+        height: 140px;
+    }
+
+    .p_1 {
+        width: 100%;
+    }
+
+    .button1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .img2 {
+        width: 100%;
+        height: auto;
+    }
+}

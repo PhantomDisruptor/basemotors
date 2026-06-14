@@ -1,0 +1,397 @@
+/* Result.css */
+.section3 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+}
+
+.divr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.h2_r {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+}
+
+.h2_r::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 30px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border-radius: 2px;
+}
+
+.divr button {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.divr button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(127,140,141,0.3);
+}
+
+/* Результаты поиска */
+.ul_s {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.li_c {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.li_c:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.li_c img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.li_c:hover img {
+    transform: scale(1.05);
+}
+
+.li_c h3 {
+    padding: 15px 20px 10px;
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.li_c > div {
+    padding: 5px 20px;
+}
+
+.li_c > div p {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.li_c > p {
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.li_c > div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 15px;
+    border-top: 1px solid #ecf0f1;
+    margin-top: 10px;
+}
+
+.li_c > div:last-of-type p {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn {
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39,174,96,0.3);
+}
+
+.btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Сообщение "нет результатов" */
+.no-results {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.no-results p:first-child {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.no-results p:last-child {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Бейджи для количества результатов */
+.results-count {
+    background: #3498db;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Фильтры на странице результатов (если добавите) */
+.results-filters {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.results-filters h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.filter-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination button.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .section3 {
+        padding: 20px 15px;
+    }
+    
+    .divr {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .h2_r {
+        font-size: 24px;
+    }
+    
+    .ul_s {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .li_c img {
+        height: 180px;
+    }
+    
+    .li_c h3 {
+        font-size: 18px;
+    }
+    
+    .li_c > p {
+        font-size: 18px;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .li_c img {
+        height: 150px;
+    }
+    
+    .li_c h3 {
+        font-size: 16px;
+    }
+    
+    .btn {
+        font-size: 12px;
+    }
+}
+
+/* Анимация загрузки */
+.results-loading {
+    text-align: center;
+    padding: 60px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #ecf0f1;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Карточка с акцией/скидкой */
+.li_c .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Характеристики в карточке */
+.car-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.spec-item {
+    background: #f8f9fa;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: #555;
+}
+
+/* Цена со скидкой */
+.old-price {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.current-price {
+    color: #e74c3c;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Кнопка "В избранное" (опционально) */
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: #e74c3c;
+}

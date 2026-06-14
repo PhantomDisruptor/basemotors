@@ -1,0 +1,26 @@
+# Зависимости
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Файлы окружения (важно! не загружайте секреты)
+.env
+.env.local
+.env.production
+
+# Сборки
+dist/
+client/dist/
+build/
+
+# Логи
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
