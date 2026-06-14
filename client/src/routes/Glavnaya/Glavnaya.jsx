@@ -157,8 +157,8 @@ export function Glavnaya() {
                 <h2 className='s_h2'>О компании</h2>
                 <div className='d_2'>
                     <div className='d_img'>
-                        <img className='img2' src="../../public/image 3.jpg" alt="" />
-                        <img className='img2' src="../../public/image 4.jpg" alt="" />
+                        <img className='img2' src="https://basemotors-api.onrender.com/images/image 3.jpg" alt="" />
+                        <img className='img2' src="https://basemotors-api.onrender.com/images/image 4.jpg" alt="" />
                     </div>               
                     <p className="p_1">
                         BaseMotors - динамичный автосалон, предлагающий широкий ассортимент автомобилей и высокий уровень обслуживания.
