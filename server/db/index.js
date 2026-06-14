@@ -8,7 +8,7 @@ const { Pool } = pg;
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,  // ← именно так для одной строки
     ssl: { rejectUnauthorized: false },
-    family: 4
+    // family: 4
 });
 // Проверка подключения
 pool.connect((err, client, release) => {
