@@ -103,7 +103,7 @@ export function AllCars() {
                 <div className="all-cars-grid">
                     {filteredCars.map(car => (
                         <div key={car.id} className="car-card" onClick={() => handleCarClick(car)}>
-                            <img src={`src/client/public/${car.img}`} alt={`${car.brand} ${car.model}`} />
+                            <img src={`https://basemotors-api.onrender.com/api${car.img}`} alt={`${car.brand} ${car.model}`} />
                             <div className="car-info">
                                 <h3>{car.brand} {car.model}</h3>
                                 <div className="car-specs">
