@@ -6,14 +6,9 @@ dotenv.config();
 const { Pool } = pg;
 
 const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_DATABASE,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT || 5432,
-    ssl: { rejectUnauthorized: false } 
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false } // Эта настройка часто требуется для Supabase [citation:4]
 });
-
 // Проверка подключения
 pool.connect((err, client, release) => {
     if (err) {
