@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = '/api';
+const API_URL = 'https://basemotors-api.onrender.com/api';
 
 const AuthContext = createContext(null);
 

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AllCars.css';
 
-const API_URL = '/api';
+const API_URL = 'https://basemotors-api.onrender.com/api';
 
 export function AllCars() {
     const [cars, setCars] = useState([]);

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Car.css';
 
-const API_URL = '/api';
+const API_URL = 'https://basemotors-api.onrender.com/api';
 
 export function Car() {
     const location = useLocation();

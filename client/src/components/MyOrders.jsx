@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MyOrders.css';
 
-const API_URL = '/api';
+const API_URL = 'https://basemotors-api.onrender.com/api';
 
 export const MyOrders = () => {
     const [orders, setOrders] = useState([]);

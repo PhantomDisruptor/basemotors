@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './Glavnaya.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-const API_URL = '/api';
+const API_URL = 'https://basemotors-api.onrender.com/api';
 export function Glavnaya() {
     let [selectedBrand,setSelectedBrand] = useState('')
     let [selectedModel,setSelectedModel] = useState('')
