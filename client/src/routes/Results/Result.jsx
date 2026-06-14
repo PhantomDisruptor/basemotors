@@ -37,7 +37,7 @@ export function Result() {
                 <ul className='ul_s'>
                     {results.map((car) => (
                         <li key={car.id} className='li_c'> 
-                            <img className='img1' src={`http://localhost:5000${car.img}`} alt={car.model} />
+                            <img className='img1' src={`https://basemotors-api.onrender.com${car.img}`} alt={car.model} />
                             <h3>{`${car.brand} ${car.model}`}</h3>
                             <div>
                                 <p>{`${car.engine_volume} л., ${car.fuel}, ${car.transmission}, ${car.drive}`}</p>
