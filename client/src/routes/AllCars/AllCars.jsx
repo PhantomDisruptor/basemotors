@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './AllCars.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = '/api';
 
 export function AllCars() {
     const [cars, setCars] = useState([]);

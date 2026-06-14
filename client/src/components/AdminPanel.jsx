@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AdminPanel.css';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = '/api';
 
 export const AdminPanel = () => {
     const [activeTab, setActiveTab] = useState('cars');
