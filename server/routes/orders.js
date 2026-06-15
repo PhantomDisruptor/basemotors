@@ -20,7 +20,7 @@ const getUserIdFromToken = (authHeader) => {
         return null;
     }
 };
-с
+
 
 // Создать заявку
 router.post('/', async (req, res) => {
