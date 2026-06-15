@@ -20,6 +20,7 @@ const getUserIdFromToken = (authHeader) => {
         return null;
     }
 };
+с
 
 // Создать заявку
 router.post('/', async (req, res) => {
@@ -35,7 +36,7 @@ router.post('/', async (req, res) => {
         
         // Получаем user_id из cookie
         let userId = null;
-        const token = req.cookies?.token;
+        const token = req.cookies?.token || req.headers['authorization']?.split(' ')[1];
         
         if (token) {
             try {
@@ -153,7 +154,7 @@ router.get('/my-orders', async (req, res) => {
     console.log('Cookies:', req.cookies);
     
     // Получаем токен из cookie
-    const token = req.cookies?.token;
+    const token = req.cookies?.token || req.headers['authorization']?.split(' ')[1];
     
     if (!token) {
         console.log('No token in cookies');
