@@ -8,18 +8,19 @@ const router = express.Router();
 // Middleware для проверки токена (локальный, чтобы избежать циклического импорта)
 const authenticateTokenLocal = async (req, res, next) => {
     const token = req.cookies?.token || req.headers['authorization']?.split(' ')[1];
-    
+    console.log('1. Token received:', !!token);
     if (!token) {
         return res.status(401).json({ error: 'Access denied' });
     }
     
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        console.log('2. Token verified, userId:', decoded.userId);
         const session = await query(
             'SELECT * FROM sessions WHERE token = $1 AND expires_at > NOW()',
             [token]
         );
-        
+        console.log('3. Session found:', session.rows.length);
         if (session.rows.length === 0) {
             return res.status(401).json({ error: 'Session expired' });
         }
@@ -28,10 +29,11 @@ const authenticateTokenLocal = async (req, res, next) => {
             'SELECT id, email, first_name, last_name, phone, role FROM users WHERE id = $1',
             [decoded.userId]
         );
-        
+         console.log('4. User found:', !!user.rows.length);
         req.user = user.rows[0];
         next();
     } catch (err) {
+        console.error('Auth error:', err.message);
         return res.status(403).json({ error: 'Invalid token' });
     }
 };
